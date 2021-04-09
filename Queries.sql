@@ -1,6 +1,6 @@
-/* Query1 */
-
+/* Query1
 (To understand more about the movies that families are watching, list each movie, the film category it is classified in, and the number of times it has been rented out). 
+*/
 
 SELECT DISTINCT
 	f.title as film_title,
@@ -21,12 +21,9 @@ ORDER BY
 	1 asc;
 
 
-
-
-
-/* Query2 */
-
+/* Query2
 (To know how the length of rental duration of these family-friendly movies compares to the duration that all movies are rented for).
+*/
 
 SELECT
 	f.title as movie_title,
@@ -41,13 +38,9 @@ WHERE
 	c.name IN ('Animation', 'Children', 'Classics', 'Comedy', 'Family' , 'Music');
 
 
-
-
-
-/* Query3 */
-
+/* Query3
 (To know how the two stores compare in their count of rental orders during every month for all the years we have data for).
-
+*/
 WITH sub1 AS (
 SELECT
  DATE_PART('month',r.rental_date) as Rental_month,
@@ -70,14 +63,9 @@ ORDER BY
 
 
 
-
-
-
-
-/* Query4 */
-
+/* Query4 
 (To know the top 10 paying customers, and how many payments they made on a monthly basis during 2007, and what was the amount of the monthly payments).
-
+*/
 
 SELECT *
 FROM (SELECT
